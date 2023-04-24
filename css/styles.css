@@ -138,13 +138,19 @@ body {
 .header-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .header-container {
     align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -204,14 +210,16 @@ body {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -28px;
+    bottom: -38px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: var(--button-hover-color);
     transition-property: color 250ms var(--activ-animation);
   }
-
+  .contact-item:first-child {
+    margin-bottom: 12px;
+  }
   .contact-link {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -239,6 +247,9 @@ body {
   .contact-list {
     display: flex;
     gap: 40px;
+  }
+  .current::after {
+    bottom: -34px;
   }
 }
 /*=======Menu-Mobile====*/
@@ -308,13 +319,18 @@ body {
 .mobile-menu-link:focus {
   color: var(--button-hover-color);
 }
+.mobile-menu-link.current {
+  color: var(--button-hover-color);
+}
 .mb-contact-list {
   margin-top: auto;
   margin-bottom: 48px;
 }
 .mobile-item > .mob-contact-tel {
   margin-bottom: 40px;
+  color: var(--button-hover-color);
 }
+
 .mb-contact-list .mobile-item:first-child {
   margin-bottom: 40px;
 }
@@ -1064,6 +1080,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.04em;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  opacity: 0.5;
   border-radius: 4px;
   padding: 8px 0 0 16px;
   outline: transparent;
@@ -1081,6 +1098,7 @@ body {
 }
 .check-icon-box a {
   color: var(--logo-color);
+  margin-left: 2px;
 }
 .check-icon-box span {
   width: 16px;

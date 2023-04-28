@@ -252,7 +252,10 @@ body {
     gap: 40px;
   }
   .current::after {
-    bottom: -34px;
+    bottom: -29px;
+  }
+  .contact-item:first-child {
+    margin-bottom: 0;
   }
 }
 /*=======Menu-Mobile====*/
